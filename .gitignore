@@ -1,2 +1,15 @@
-.vscode/settings.json
 .bash_history
+**/*.rs.bk
+.#*
+.gdb_history
+Cargo.lock
+target/
+
+# editor files
+.vscode/*
+!.vscode/*.md
+!.vscode/*.svd
+!.vscode/launch.json
+!.vscode/tasks.json
+!.vscode/extensions.json
+!.vscode/settings.json
