@@ -10,7 +10,7 @@ use embedded_hal::digital::OutputPin;
 use panic_probe as _;
 use rp235x_hal::clocks::init_clocks_and_plls;
 use rp235x_hal::{self as hal, entry};
-use rp235x_hal::{pac, Clock};
+use rp235x_hal::{Clock, pac};
 
 // Provide an alias for our BSP so we can switch targets quickly.
 // Uncomment the BSP you included in Cargo.toml, the rest of the code does not need to change.
@@ -61,7 +61,7 @@ fn main() -> ! {
     // If you have a Pico W and want to toggle a LED with a simple GPIO output pin, you can connect an external
     // LED to one of the GPIO pins, and reference that pin here. Don't forget adding an appropriate resistor
     // in series with the LED.
-    let mut led_pin = pins.gpio25.into_push_pull_output();
+    let mut led_pin = pins.gpio22.into_push_pull_output();
 
     loop {
         info!("on!");
